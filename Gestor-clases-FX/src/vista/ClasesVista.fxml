@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="505.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ClasesController">
+   <children>
+      <BorderPane prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView prefHeight="244.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="colId" minWidth="0.0" prefWidth="0.0" text="id" />
+                  <TableColumn fx:id="colAlumno" prefWidth="150.0" text="Alumno" />
+                  <TableColumn fx:id="colFechaClase" prefWidth="180.0" text="Fecha clase" />
+                  <TableColumn fx:id="colHInicio" prefWidth="97.0" text="H. inicio" />
+                  <TableColumn fx:id="colHFin" prefWidth="113.0" text="H. Fin" />
+                  <TableColumn fx:id="colPrecio" prefWidth="121.0" text="Precio" />
+               </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <Pane prefHeight="70.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <HBox prefHeight="69.0" prefWidth="663.0">
+                     <children>
+                        <VBox prefHeight="48.0" prefWidth="497.0">
+                           <children>
+                              <Label text="Ganado" />
+                              <TextField fx:id="txtGanado" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="54.0" prefWidth="169.0">
+                           <children>
+                              <Label text="Alumnos activos" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </children></Pane>
+         </bottom>
+         <left>
+            <Pane prefHeight="182.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="182.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <HBox prefHeight="145.0" prefWidth="703.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="199.0" prefWidth="280.0">
+                     <children>
+                        <VBox prefHeight="148.0" prefWidth="280.0" spacing="5.0">
+                           <children>
+                              <Label text="Alumno" />
+                              <ComboBox fx:id="cmbAlumno" prefHeight="25.0" prefWidth="250.0" />
+                              <HBox prefHeight="50.0" prefWidth="251.0">
+                                 <children>
+                                    <VBox prefHeight="50.0" prefWidth="130.0">
+                                       <children>
+                                          <Label fx:id="dtpFechaInicio" text="Fecha inicio" />
+                                          <DatePicker prefHeight="25.0" prefWidth="125.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="50.0" prefWidth="112.0">
+                                       <children>
+                                          <Label fx:id="dtpFechaFin" text="Fecha fin" />
+                                          <DatePicker prefHeight="25.0" prefWidth="125.0" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane prefHeight="145.0" prefWidth="156.0">
+                     <children>
+                        <VBox prefHeight="145.0" prefWidth="146.0" spacing="12.0">
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                           <children>
+                              <Label text="Origen" />
+                              <HBox prefHeight="27.0" prefWidth="134.0">
+                                 <children>
+                                    <RadioButton fx:id="rdbTodosOrigen" mnemonicParsing="false" text="Todos" />
+                                    <RadioButton fx:id="rdbClassgap" mnemonicParsing="false" text="Classgap">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <RadioButton fx:id="rdbOnline" mnemonicParsing="false" text="Online" />
+                                    <RadioButton fx:id="rdbPresencial" mnemonicParsing="false" text="Presencial">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children></Pane>
+                  <Pane prefHeight="145.0" prefWidth="144.0">
+                     <children>
+                        <VBox layoutX="25.0" prefHeight="145.0" prefWidth="118.0" spacing="7.0">
+                           <children>
+                              <Label text="Estado" />
+                              <RadioButton fx:id="rdbTodosEstados" mnemonicParsing="false" text="Todos" />
+                              <RadioButton fx:id="rdbRealizadas" mnemonicParsing="false" text="Realizadas" />
+                              <RadioButton fx:id="rdbPendientes" mnemonicParsing="false" text="Pendientes" />
+                           </children>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="145.0" prefWidth="97.0">
+                     <children>
+                        <VBox prefHeight="147.0" prefWidth="100.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btnLimpiar" mnemonicParsing="false" prefWidth="80.0" text="Limpiar" />
+                              <Button fx:id="btnFiltrar" mnemonicParsing="false" prefWidth="80.0" text="Filtrar" />
+                           </children>
+                           <padding>
+                              <Insets top="50.0" />
+                           </padding>
+                        </VBox>
+                     </children></Pane>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </top>
+      </BorderPane>
+      <MenuBar prefHeight="25.0" prefWidth="703.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Alumnos">
+            <items>
+              <MenuItem fx:id="miVerAlumnos" mnemonicParsing="false" onAction="#abrirVerAlumnos" text="Ver..." />
+                  <MenuItem fx:id="miCrearAlumno" mnemonicParsing="false" onAction="#crearAlumno" text="Crear..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Clases">
+            <items>
+              <MenuItem fx:id="miNuevaClase" mnemonicParsing="false" onAction="#crearClase" text="Nueva..." />
+                  <MenuItem fx:id="miEditarClase" mnemonicParsing="false" onAction="#editarClase" text="Editar..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Pagos">
+            <items>
+              <MenuItem fx:id="miVerPagos" mnemonicParsing="false" onAction="#verPagos" text="Ver pagos..." />
+                  <MenuItem fx:id="miPagoManual" mnemonicParsing="false" onAction="#abrirPagoManual" text="Pagos manual..." />
+                  <MenuItem fx:id="miGraficaPago" mnemonicParsing="false" onAction="#abrirGraficaPago" text="Grafica pagos..." />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+              <items>
+                <MenuItem fx:id="miAyuda" mnemonicParsing="false" onAction="#abrirAyuda" text="Ayuda" />
+                  <MenuItem fx:id="miAbout" mnemonicParsing="false" onAction="#abrirAbout" text="Sobre gestor de clases FX" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
